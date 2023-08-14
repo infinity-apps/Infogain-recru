@@ -1,0 +1,24 @@
+// imports + style resets
+
+@import-normalize;
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: local('Noto Sans'), url(./assets/fonts/NotoSans-Regular.ttf) format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: local('Noto Sans'), url(./assets/fonts/NotoSans-SemiBold.ttf) format('truetype');
+  font-weight: bold;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+body,
+figure {
+  margin: 0;
+}
