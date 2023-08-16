@@ -13,7 +13,7 @@ export const request = async (
 
   let url = isSecure ? "http://" : "https://";
   url += apiUrl;
-  url += apiPort && `:${apiPort}`;
+  url += apiPort ? `:${apiPort}` : "";
   url += `/${endpoint}`;
 
   return await fetch(url, {
