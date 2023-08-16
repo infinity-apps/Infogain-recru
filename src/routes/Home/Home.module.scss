@@ -1,0 +1,54 @@
+.table {
+  border: 1px solid $light;
+  border-collapse: collapse;
+  letter-spacing: 0;
+  font-size: 0.9em;
+
+  tbody {
+    td:first-child {
+      color: $white;
+      background: $blue;
+    }
+  }
+
+  th,
+  td {
+    padding: 5px;
+    vertical-align: top;
+  }
+
+  th {
+    text-align: left;
+    background: $blueLight;
+    color: $white;
+  }
+}
+
+.row {
+  cursor: pointer;
+
+  &:hover {
+    background: $grayLight;
+  }
+
+  > td:first-child {
+    b span {
+      @media all and (max-width: $phablet) {
+        display: none;
+      }
+    }
+  }
+}
+
+.row-details {
+  margin-bottom: 15px;
+  font-style: italic;
+
+  td {
+    padding: 5px 5px 20px 5px;
+  }
+
+  p {
+    margin: 0;
+  }
+}

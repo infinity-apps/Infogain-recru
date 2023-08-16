@@ -1,0 +1,9 @@
+nav {
+  .nav-is-active {
+    background: $greenDarker;
+
+    &:hover {
+      background: $greenDarker;
+    }
+  }
+}

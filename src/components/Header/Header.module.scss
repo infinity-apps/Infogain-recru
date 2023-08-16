@@ -1,0 +1,19 @@
+.header {
+  padding: 15px;
+  background: $blueDark;
+  color: $white;
+
+  figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  figcaption {
+    margin-left: 0.5em;
+
+    span {
+      font-weight: bold;
+    }
+  }
+}

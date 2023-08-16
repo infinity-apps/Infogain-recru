@@ -1,6 +1,7 @@
 // imports + style resets
 
 @import-normalize;
+@import 'assets/styles/global';
 
 @font-face {
   font-family: 'Noto Sans';
@@ -12,13 +13,4 @@
   font-family: 'Noto Sans';
   src: local('Noto Sans'), url(./assets/fonts/NotoSans-SemiBold.ttf) format('truetype');
   font-weight: bold;
-}
-
-body {
-  font-family: 'Noto Sans', sans-serif;
-}
-
-body,
-figure {
-  margin: 0;
 }

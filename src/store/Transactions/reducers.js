@@ -1,21 +1,35 @@
-import { TRANSACTIONS_REQUEST, TRANSACTIONS_UPDATE, TRANSACTIONS_ERROR } from './types';
+import {
+  TRANSACTIONS_REQUEST,
+  TRANSACTIONS_UPDATE,
+  TRANSACTIONS_ERROR,
+} from "./types";
 
 export const initialState = {
-    transactions: [],
+  transactions: [],
+  isLoading: false,
+  error: null,
 };
 
 const transactionsReducer = (state = initialState, action) => {
-    switch (action.type) {
-        case TRANSACTIONS_REQUEST:
-            return { ...state };
-        case TRANSACTIONS_UPDATE:
-            const { transactions } = action.payload;
-            return { ...state, transactions };
-        case TRANSACTIONS_ERROR:
-            return { ...state, transactions: [] };
-        default:
-            return state;
-    }
+  switch (action.type) {
+    case TRANSACTIONS_REQUEST:
+      return { ...state, isLoading: true, error: false };
+    case TRANSACTIONS_UPDATE:
+      const { transactions } = action.payload;
+
+      return { ...state, transactions, isLoading: false };
+    case TRANSACTIONS_ERROR:
+      const { error } = action;
+
+      return {
+        ...state,
+        transactions: [],
+        isLoading: false,
+        error,
+      };
+    default:
+      return state;
+  }
 };
 
 export default transactionsReducer;

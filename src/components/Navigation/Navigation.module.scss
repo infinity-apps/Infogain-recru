@@ -1,0 +1,39 @@
+.main-navigation {
+  ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  li {
+    flex: 1 0 auto;
+    margin: 0 10px;
+
+    @media all and (max-width: $phablet) {
+      flex: auto;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    display: block;
+    padding: 10px 50px;
+    text-align: center;
+    background: $green;
+    color: $white;
+
+    @media all and (max-width: $phablet) {
+      padding: 10px 25px;
+    }
+
+    &:hover {
+      background: $greenDark;
+    }
+  }
+}

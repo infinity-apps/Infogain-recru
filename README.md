@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Requirements
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+nodeJS v16 / v18 are fully compatible
 
-## Available Scripts
+# Available Scripts
 
-In the project directory, you can run:
+### DEV MODE:
+`npm run start`
 
-### `npm start`
+This command performs the following actions:
+- Launches the server with simulated data
+- Configures environment variables (Note: .env file is excluded from version control intentionally)
+- Utilizes craco (a part of the react-scripts library) for global SCSS variables (custom webpack config)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Once executed, the application should be accessible at http://localhost:3000.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### PRODUCTION MODE:
+`npm run build`
 
-### `npm test`
+This command executes the following steps:
+- Sets up necessary environment variables (Note: .env file is excluded from version control intentionally)
+- Uses craco (from react-scripts library) for global SCSS variables (custom webpack config)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To access the built application, run: `http-server --push-state` within the "build" directory.
 
-### `npm run build`
+Note: Ensure that for production mode, appropriate mock data is set. To achieve this, run the JSON server: `npm run server`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### SERVER:
+`npm run server`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This command configures mock data, accessible at the URL: http://localhost:3001/transactions.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### TESTS:
+`npm run test`
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Additional notes:
+- I didn't use any frameworks, but utilized some libraries including react-router-dom, react-redux, cross-env, etc.
+- Mock data is achieved through the json-server library.
+- I've introduced a few extra functionalities, such as sorting raw transaction data and expanding client transactions' details.
+- Basic responsiveness is implemented; the interface is well-presented above 360px viewport width.
+- JEST unit tests are incorporated, particularly for sensitive calculations related to transactions.
+- Error handling is in place; however, multiple retries for a failed API request aren't implemented (do you require this functionality?).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

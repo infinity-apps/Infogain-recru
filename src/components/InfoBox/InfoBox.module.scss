@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  margin: 10px 0;
+  padding: 10px;
+  color: white;
+}
+
+.info {
+  background: $black;
+}
+
+.error {
+  background: red;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  width: 40px;
+}
