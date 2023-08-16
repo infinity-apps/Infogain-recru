@@ -35,8 +35,9 @@ This command configures mock data, accessible at the URL: http://localhost:3001/
 
 
 # Additional notes:
+- To regenerate data, re-run the server, so `npm run start` in the dev. mode, `npm run server` in the prod. mode.
 - I didn't use any frameworks, but utilized some libraries including react-router-dom, react-redux, cross-env, etc.
-- Mock data is achieved through the json-server library.
+- Mocking data is achieved through the json-server library.
 - I've introduced a few extra functionalities, such as sorting raw transaction data and expanding client transactions' details.
 - Basic responsiveness is implemented; the interface is well-presented above 360px viewport width.
 - JEST unit tests are incorporated, particularly for sensitive calculations related to transactions.
